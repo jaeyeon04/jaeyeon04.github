@@ -5,9 +5,16 @@
         <meta charset="uyf-8" />
         <!-- utf-8, euc-kr -->
         <meta name="keywords" content="웹퍼블리싱, 계원, html, css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <style>
+            body{
+                color: brown;
+            }
+        </style>
+
     </head>
     <body> <!-- 본문 -->
-        <a href="subpage.html">서브페이지</a>
+        <a style="color: purple;" href="subpage.html">서브페이지</a>
         <a href="freepage.html">자유페이지</a>
         <a href="https://www.google.com">구글 바로가기</a>
         <a href="https://www.cafe.naver.com/kwdmd">계원 카페 바로가기</a>
@@ -134,6 +141,76 @@
 
         </from>
         
+        <div></div>
+        <section>
+            <h1>구획 제목</h1>
+            구획 내용
+        </section>
+        <nav>
+            <ul>
+                <li><a href="링크주소">버튼 1</a></li>
+                <li><a href="링크주소">버튼 2</a></li>
+            </ul>
+        </nav>
+        <article> <!-- 문서 주제와 다소 벗어난 이야기 -->
+            <h1>기사 제목</h1>
+            기사 내용
+        </article>
+        <aside>
+            <h1>광고 제목</h1>
+            광고 내용
+        </aside>
+
+        <header></header> <!-- 본문(body)의 서론 -->
+        <footer></footer> <!-- 본문(body)의 결론 -->
+
+        <canvas id="myCanvas"></canvas>
+        <style type="text/css">
+            #myCanvas{
+                height: 300px;
+                width: 300px;
+            }
+        </style>
         
+        <script>
+          var canvas = document.getElementById("myCanvas"); //myCanvas라는 이름의 canvas element를 받아옵니다.
+          var ctx = canvas.getContext("2d"); //2D canvas를 생성합니다.
+          ctx.fillStyle = "#FF0000"; //색을 지정합니다.
+          
+          ctx.fillRect(25, 25, 100, 100); //채움 사각형
+          ctx.clearRect(45, 45, 60, 60); //사각형태로 지우기
+          ctx.strokeRect(50, 50, 50, 50); //윤곽 사각형
+          
+          ctx.fillStyle = "#000000";
+          ctx.beginPath(); //선그리기 시작
+          ctx.moveTo(65, 75); //펜 들어 움직이기
+          ctx.lineTo(90, 95); //선 그으며 움직이기
+          ctx.lineTo(90, 55);
+          ctx.fill(); //내부 채우기
+          
+          ctx.beginPath();
+          ctx.arc(225, 75, 50, 0, Math.PI * 2, true); // Outer circle 
+          ctx.moveTo(260, 75);
+          ctx.arc(225, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+          ctx.moveTo(215, 65);
+          ctx.arc(210, 65, 5, 0, Math.PI * 2, true);  // Left eye
+          ctx.moveTo(245, 65);
+          ctx.arc(240, 65, 5, 0, Math.PI * 2, true);  // Right eye
+          ctx.stroke();
+        </script>
+
+        <audio controls>
+            <source src="mp3/file_example_MP3_700KB.mp3" type="audio/mpeg">
+        </audio>
+
+        <video controls>
+            <source src="mp4/file_example_MP4_480_1_5MG.mp4" type="video/mp4" />
+        </video>
+        
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dx-UrezCBjY?si=6PkBFDUAcv9e34kt" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+
     </body>
+
 </html> <!-- 종료태그 -->
